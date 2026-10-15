@@ -121,7 +121,7 @@ void jugarPartida(int& contadorID) {
 // Función para ESCRIBIR en el archivo de texto en disco
 void guardarEnDisco(const Partida& p) {
     // ios::app permite agregar al final sin borrar partidas anteriores
-    ofstream archivo("src/historial_partidas.txt", ios::app);
+    ofstream archivo("src/historia_partidas.txt", ios::app);
 
     if (!archivo.is_open()) {
         cerr << "[ERROR] No se pudo abrir el archivo para guardar la partida." << endl;
@@ -141,7 +141,7 @@ void guardarEnDisco(const Partida& p) {
 
 // Función para LEER el historial persistido desde el archivo
 void leerHistorialDisco() {
-    ifstream archivo("src/historial_partidas.txt");
+    ifstream archivo("src/historia_partidas.txt");
 
     if (!archivo.is_open()) {
         cout << "\n[AVISO] Aun no existen partidas guardadas en disco." << endl;
